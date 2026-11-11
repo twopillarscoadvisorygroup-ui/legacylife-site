@@ -402,3 +402,5 @@ input[type="range"]:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 6px 
   .score-float .go { margin-left: auto; color: #CFE0D6; font-size: .98rem; }
   .score-float:hover { color: #fff; }
 }
+.founder-name { font-family: var(--display); font-size: 1.7rem; color: #fff; font-weight: 600; margin: 0 0 12px; }
+.founder-name span { display: inline-block; margin-left: 10px; font-family: var(--body); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); vertical-align: middle; }
