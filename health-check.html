@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Business Health Check | Legacy Life Inc.</title>
+<meta name="description" content="Slide in your revenue, expenses, credit score and a few basics to get a free, instant Business Health Score with friendly next steps.">
+<meta property="og:title" content="Free Business Health Check | Legacy Life Inc.">
+<meta property="og:description" content="Slide in your revenue, expenses, credit score and a few basics to get a free, instant Business Health Score with friendly next steps.">
+<meta name="theme-color" content="#1F4D3A">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=2">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Legacy Life Inc. home">
+      <img src="assets/logo.svg" alt="" width="46" height="46">
+      <span class="brand-name">Legacy Life<small>Inc.<span class="hide-sm"> · Consulting &amp; Compliance</span></small></span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="health-check.html" class="nav-tool" aria-current="page">Free Health Check</a></li><li><a href="about.html">About</a></li><li><a href="blog/index.html">Blog</a></li><li><a href="contact.html">Contact</a></li><li class="mobile-only"><a href="tel:+14437528886">Call 443-752-8886</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+14437528886">443-752-8886</a>
+      <a class="btn btn-primary" href="contact.html">Book a free consult</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span><span class="label">Menu</span></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Free tool · About 2 minutes</span>
+    <h1>Your Business <em class="accent">Health Check.</em></h1>
+    <p class="lead">Move the sliders or type your numbers. Your score updates instantly. Rough estimates are fine, and nothing you enter is sent anywhere.</p>
+    <p class="hero-note"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Private: everything stays on your device. No sign‑up, no email required.</p>
+  </div>
+</section>
+
+<section style="padding-top:48px">
+  <div class="wrap">
+    <form class="tool" id="health-check" onsubmit="return false" aria-label="Business Health Check">
+      <div class="tool-panel">
+        <div class="step">
+          <h2 class="step-title"><span class="n">1</span>Your money, month to month</h2>
+          <div class="slider-field" data-slider>
+  <div class="slider-top">
+    <label for="revenue-num">Average monthly revenue<br><span class="hint">Money coming in before expenses</span></label>
+    <div class="slider-value"><span>$</span><input id="revenue-num" type="number" inputmode="numeric" min="0" max="2000000" step="500" value="25000" name="revenue" aria-describedby="revenue-scale"></div>
+  </div>
+  <input type="range" min="0" max="200000" step="500" value="25000" aria-label="Average monthly revenue slider" tabindex="-1">
+  <div class="scale" id="revenue-scale"><span>$0</span><span>$200k+</span></div>
+</div>
+          <div class="slider-field" data-slider>
+  <div class="slider-top">
+    <label for="expenses-num">Average monthly expenses<br><span class="hint">Rent, payroll, supplies, loan payments and so on</span></label>
+    <div class="slider-value"><span>$</span><input id="expenses-num" type="number" inputmode="numeric" min="0" max="2000000" step="500" value="20000" name="expenses" aria-describedby="expenses-scale"></div>
+  </div>
+  <input type="range" min="0" max="200000" step="500" value="20000" aria-label="Average monthly expenses slider" tabindex="-1">
+  <div class="scale" id="expenses-scale"><span>$0</span><span>$200k+</span></div>
+</div>
+        </div>
+
+        <div class="step">
+          <h2 class="step-title"><span class="n">2</span>Credit &amp; debt</h2>
+          <div class="slider-field" data-slider>
+            <div class="slider-top">
+              <label for="credit-num">Owner’s personal credit score<br><span class="hint">Your best guess is fine</span></label>
+              <div class="slider-value"><input id="credit-num" type="number" inputmode="numeric" min="300" max="850" step="5" value="680" name="credit"></div>
+            </div>
+            <input type="range" min="300" max="850" step="5" value="680" aria-label="Credit score slider" tabindex="-1">
+            <div class="scale"><span>300 · Needs work</span><span>850 · Excellent</span></div>
+          </div>
+          <div class="slider-field" data-slider>
+  <div class="slider-top">
+    <label for="debt-num">Total business debt<br><span class="hint">Loans, credit cards and lines of credit combined</span></label>
+    <div class="slider-value"><span>$</span><input id="debt-num" type="number" inputmode="numeric" min="0" max="5000000" step="1000" value="40000" name="debt" aria-describedby="debt-scale"></div>
+  </div>
+  <input type="range" min="0" max="500000" step="1000" value="40000" aria-label="Total business debt slider" tabindex="-1">
+  <div class="scale" id="debt-scale"><span>$0</span><span>$500k+</span></div>
+</div>
+          <div class="field">
+            <label for="years">How long have you been in business?</label>
+            <select id="years" name="years">
+              <option value="0">Not started yet</option>
+              <option value="lt1">Less than 1 year</option>
+              <option value="1-2" selected>1 to 2 years</option>
+              <option value="2-5">2 to 5 years</option>
+              <option value="5+">More than 5 years</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="step">
+          <h2 class="step-title"><span class="n">3</span>Structure &amp; paperwork</h2>
+          <fieldset class="chips">
+            <legend>What type of business do you have?</legend>
+            <label class="chip"><input type="radio" name="entity" value="none"><span>Not formed yet</span></label>
+            <label class="chip"><input type="radio" name="entity" value="sole"><span>Sole proprietor</span></label>
+            <label class="chip"><input type="radio" name="entity" value="llc" checked><span>LLC</span></label>
+            <label class="chip"><input type="radio" name="entity" value="scorp"><span>S‑Corp</span></label>
+            <label class="chip"><input type="radio" name="entity" value="ccorp"><span>C‑Corp</span></label>
+            <label class="chip"><input type="radio" name="entity" value="nonprofit"><span>Nonprofit</span></label>
+          </fieldset>
+          <p class="label" style="margin-bottom:12px">Which of these do you already have? <span class="hint">Tap all that apply</span></p>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="habit" data-label="EIN (federal tax ID)" checked><span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg></span>EIN (federal tax ID)</label>
+            <label class="check"><input type="checkbox" name="habit" data-label="Separate business bank account" checked><span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg></span>Separate business bank account</label>
+            <label class="check"><input type="checkbox" name="habit" data-label="Books updated every month"><span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg></span>Books updated every month</label>
+            <label class="check"><input type="checkbox" name="habit" data-label="State annual report filed on time"><span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg></span>State annual report filed on time</label>
+            <label class="check"><input type="checkbox" name="habit" data-label="Business licenses and permits current"><span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg></span>Business licenses and permits current</label>
+            <label class="check"><input type="checkbox" name="habit" data-label="Registered agent on file"><span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 12.5l4 4 8-9"/></svg></span>Registered agent on file</label>
+          </div>
+        </div>
+        <div class="btn-row"><button class="btn btn-ghost" type="reset" data-reset>Start over</button></div>
+      </div>
+
+      <a class="score-float" href="#results" id="score-float" aria-hidden="true" tabindex="-1"><span>Your score</span><b id="score-float-num">0</b><span class="go">See results ↓</span></a>
+      <aside class="result" id="results" aria-live="polite" aria-label="Your results">
+        <h2>Your Business Health Score</h2>
+        <p class="sub">Updates as you go</p>
+        <div class="gauge">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="track" cx="100" cy="100" r="88" fill="none" stroke-width="16"/>
+            <circle class="arc" cx="100" cy="100" r="88" fill="none" stroke="#D9A441" stroke-width="16" stroke-linecap="round"/>
+          </svg>
+          <div class="gauge-num"><b id="score">0</b><small>out of 100</small></div>
+        </div>
+        <p class="verdict" id="verdict">Let’s see…</p>
+        <div class="sub-scores">
+          <div class="sub-score"><div class="row"><span>Cash flow</span><span id="val-cash"></span></div><div class="track"><div class="fill" id="bar-cash"></div></div></div>
+          <div class="sub-score"><div class="row"><span>Credit &amp; funding</span><span id="val-funding"></span></div><div class="track"><div class="fill" id="bar-funding"></div></div></div>
+          <div class="sub-score"><div class="row"><span>Compliance</span><span id="val-comp"></span></div><div class="track"><div class="fill" id="bar-comp"></div></div></div>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="k">Monthly profit</div><div class="v" id="stat-profit">$0</div></div>
+          <div class="stat"><div class="k">Profit margin</div><div class="v" id="stat-margin">—</div></div>
+          <div class="stat"><div class="k">Debt vs. yearly revenue</div><div class="v" id="stat-ratio">0%</div></div>
+          <div class="stat"><div class="k">Basics in place</div><div class="v" id="stat-checks">0 of 6</div></div>
+        </div>
+        <p class="tips-title">Your next steps</p>
+        <ul class="tips" id="tips"></ul>
+        <a class="btn btn-primary" href="contact.html">Talk through my results, free <span class="arrow" aria-hidden="true">→</span></a>
+        <p class="fine">This is an educational estimate only, not financial, credit, legal or tax advice. Lenders and agencies use their own criteria.</p>
+      </aside>
+    </form>
+    <div class="disclaimer-box"><strong>How the score works:</strong> We look at three areas equally. <em>Cash flow</em> is based on your profit margin. <em>Credit &amp; funding</em> weighs your credit score, your debt compared with a year of revenue and how long you’ve been in business. <em>Compliance</em> looks at your business structure and the basics you’ve checked. It’s a simple starting point for a conversation, not a credit decision.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Want a real plan, not just a score?</h2>
+        <p>In a free consultation we’ll walk through your results together and show you the first three things to fix.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="contact.html">Book a free consult <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-light" href="tel:+14437528886">Call 443-752-8886</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="46" height="46"><span class="brand-name">Legacy Life<small>Inc.</small></span></a>
+        <p>Financial consulting and business compliance for owners who want to build something that lasts.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="health-check.html">Free Health Check</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#bookkeeping">Bookkeeping &amp; cash flow</a></li>
+          <li><a href="services.html#credit">Business credit &amp; funding</a></li>
+          <li><a href="services.html#compliance">Entity setup &amp; compliance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+14437528886">443-752-8886</a></li>
+          <li><a href="mailto:director@legacylifeinc.com">director@legacylifeinc.com</a></li>
+          <li>Baltimore, MD · Serving clients nationwide</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Legacy Life Inc. All rights reserved.</span>
+      <span>Information on this site is educational and is not legal, tax or investment advice.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/main.js?v=2"></script>
+</body>
+</html>
