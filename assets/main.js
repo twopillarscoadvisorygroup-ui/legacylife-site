@@ -51,7 +51,7 @@
     return (neg ? "−" : "") + s;
   }
   function clamp(n, lo, hi) { return Math.max(lo, Math.min(hi, n)); }
-  function colorFor(score) { return score >= 75 ? "#5FB38A" : score >= 50 ? "#D9A441" : "#E07B5A"; }
+  function colorFor(score) { return score >= 75 ? "#5FB38A" : score >= 50 ? "#C9A24E" : "#E07B5A"; }
 
   function initHealthCheck(root) {
     // Link every slider to its typed-number box
