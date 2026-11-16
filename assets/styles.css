@@ -475,3 +475,11 @@ input[type="range"]:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 6px 
 }
 
 .pill { display: inline-block; padding: 6px 14px; border-radius: 99px; font-weight: 700; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; }
+
+/* ---------- Blog filters ---------- */
+.blog-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+.filter-chip { min-height: 50px; padding: 10px 20px; border-radius: 999px; border: 2px solid var(--sand-deep); background: #fff; color: var(--ink); font: 700 1rem var(--body); cursor: pointer; transition: all .15s; }
+.filter-chip:hover { border-color: var(--clay); }
+.filter-chip[aria-pressed="true"] { background: var(--clay); border-color: var(--clay); color: #fff; }
+.filter-count { color: var(--muted); font-weight: 600; margin-bottom: 26px; }
+.post-card[hidden] { display: none; }

@@ -35,6 +35,24 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
+  /* ---------- Blog topic filters ---------- */
+  var chipsEl = document.querySelectorAll(".filter-chip");
+  if (chipsEl.length) {
+    var cards = document.querySelectorAll(".post-grid .post-card");
+    var countEl = document.getElementById("filter-count");
+    chipsEl.forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        var f = chip.dataset.filter, n = 0;
+        chipsEl.forEach(function (c) { c.setAttribute("aria-pressed", String(c === chip)); });
+        cards.forEach(function (c) {
+          var show = f === "all" || c.dataset.tag === f;
+          c.hidden = !show; if (show) { n++; c.classList.add("in"); }
+        });
+        if (countEl) countEl.textContent = f === "all" ? "Showing all " + n + " articles" : "Showing " + n + " article" + (n === 1 ? "" : "s") + " on " + chip.textContent;
+      });
+    });
+  }
+
   /* ---------- Safe storage helpers ---------- */
   function store(key, val) { try { sessionStorage.setItem(key, val); } catch (e) {} }
   function recall(key) { try { return sessionStorage.getItem(key); } catch (e) { return null; } }
