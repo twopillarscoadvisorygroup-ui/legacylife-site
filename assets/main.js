@@ -4,7 +4,7 @@
   document.documentElement.classList.remove("no-js");
 
   var CONTACT_EMAIL = "director@legacylifeinc.com";
-  var CONTACT_PHONE = "443-752-8886";
+  var CONTACT_PHONE = "410-688-8048";
 
   /* ---------- Mobile menu ---------- */
   var menuBtn = document.querySelector(".menu-btn");
@@ -212,6 +212,12 @@
      ====================================================== */
   var form = document.getElementById("contact-form");
   if (form) {
+    try {
+      var svc = new URLSearchParams(window.location.search).get("service");
+      var map = { carf: "CARF accreditation preparation", wisp: "WISP for tax professionals" };
+      var tsel = form.querySelector('[name="topic"]');
+      if (svc && map[svc] && tsel) tsel.value = map[svc];
+    } catch (e) {}
     var saved = recall("ll-health");
     if (saved) {
       try {
@@ -221,7 +227,7 @@
         var topic = form.querySelector('[name="topic"]');
         if (note) { note.textContent = "Thanks for taking the Business Health Check! We added your score (" + h.score + "/100) to your message so we can prepare."; note.classList.add("show"); }
         if (msg && !msg.value) msg.value = "I took the free Business Health Check and scored " + h.score + "/100 (" + h.verdict + "). Cash flow " + h.cash + ", credit & funding " + h.funding + ", compliance " + h.comp + ". I'd like to talk through the results.";
-        if (topic) topic.value = "Free consultation";
+        if (topic && !/[?&]service=/.test(window.location.search)) topic.value = "Free consultation";
       } catch (e) {}
     }
 
@@ -251,7 +257,7 @@
       window.location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
       var status = document.getElementById("form-status");
       if (status) {
-        status.innerHTML = "Your email app should open with your message ready — just press <strong>Send</strong>. If nothing opened, email us at <a href=\"mailto:" + CONTACT_EMAIL + "\">" + CONTACT_EMAIL + "</a> or call <a href=\"tel:+14437528886\">" + CONTACT_PHONE + "</a>.";
+        status.innerHTML = "Your email app should open with your message ready — just press <strong>Send</strong>. If nothing opened, email us at <a href=\"mailto:" + CONTACT_EMAIL + "\">" + CONTACT_EMAIL + "</a> or call <a href=\"tel:+14106888048\">" + CONTACT_PHONE + "</a>.";
         status.classList.add("show");
       }
     });
